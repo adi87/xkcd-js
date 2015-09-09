@@ -9,22 +9,19 @@ XKCD.js
 
 ## Example
 
-    var xkcd = require('./xkcd')
+    var xkcd = require('./index')
       , util = require('util');
-    xkcd.get_random(8000,8000,function(res) {
-      util.puts('comic location: '+res.url);
-      process.exit(1);
+
+    xkcd.get_random(function(res) {
+      util.puts(res.img);
     });
+
 
 ## API
 
 ### get_random
 
 Generate data from a random comic with no restrictions.
-
-### get_random_width_height
-
-Generate data from a random comic that meets criteria. Requires a width and height as parameters.
 
 See example.
 
